@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => ({
   "twitter:title": "Gianfranco Elli - Software developer.",
   "twitter:description":
     "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
-  "twitter:image": "https://gianelli.vercel.app/assets/og-image.png",
+  "twitter:image": "https://gianelli.vercel.app/images/og-image.png",
 });
 
 export default function App() {
