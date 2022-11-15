@@ -10,9 +10,23 @@ import {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Gianfranco Elli",
-  description: "Software developer, I love looking 'Underneath the hood'.",
   viewport: "width=device-width,initial-scale=1",
+  title: "Gianfranco Elli - Software developer.",
+  description:
+    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
+  "og:type": "website",
+  "og:url": "https://gianelli.vercel.app/",
+  "og:title": "Gianfranco Elli - Software developer.",
+  "og:description":
+    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
+  "og:image": "https://gianelli.vercel.app/images/og-image.png",
+  "twitter:card": "summary_large_image",
+  "twitter:creator": "@GianElli99",
+  "twitter:url": "https://gianelli.vercel.app",
+  "twitter:title": "Gianfranco Elli - Software developer.",
+  "twitter:description":
+    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
+  "twitter:image": "https://gianelli.vercel.app/assets/og-image.png",
 });
 
 export default function App() {
