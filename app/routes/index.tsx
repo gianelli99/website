@@ -1,24 +1,20 @@
 import type { LinksFunction } from "@remix-run/node";
-import { PersonalInfoCard } from "~/components/PersonalInfo";
-
-const FACE_URL = "/images/my-face.jpeg";
+import { NavBar } from "~/components/NavBar";
+import {
+  PersonalInfoCard,
+  links as personalInfoCardLinks,
+} from "~/components/PersonalInfo";
 
 export const links: LinksFunction = () => {
-  return [
-    {
-      rel: "preload",
-      href: FACE_URL,
-      as: "image",
-    },
-  ];
+  return [...personalInfoCardLinks()];
 };
 
 export default function Index() {
   return (
     <div className="max-w-2xl mx-auto">
-      <nav>Navbar</nav>
+      <NavBar />
       <main>
-        <PersonalInfoCard image={FACE_URL} />
+        <PersonalInfoCard />
         <div>Blogs</div>
       </main>
       <footer>Footer</footer>
