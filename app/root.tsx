@@ -44,7 +44,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-full bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
+      <body className="min-h-full antialiased bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
