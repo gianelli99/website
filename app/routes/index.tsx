@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import { NavBar } from "~/components/NavBar";
 import {
   PersonalInfoCard,
   links as personalInfoCardLinks,
@@ -12,12 +11,10 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <div className="max-w-2xl mx-auto">
-      <NavBar />
       <main>
         <PersonalInfoCard />
-        <div>Blogs</div>
+        <div>Favorite Projects</div>
       </main>
-      <footer>Footer</footer>
     </div>
   );
 }

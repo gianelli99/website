@@ -7,6 +7,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
 
 import styles from "./styles/app.css";
 
@@ -45,7 +47,9 @@ export default function App() {
         <Links />
       </head>
       <body className="min-h-full antialiased bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
+        <NavBar />
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
