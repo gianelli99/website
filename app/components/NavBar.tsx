@@ -11,6 +11,10 @@ export const NavBar = () => {
       content: "Projects",
     },
     {
+      to: "/work",
+      content: "Work",
+    },
+    {
       to: "/blogs",
       content: "Blogs",
     },
