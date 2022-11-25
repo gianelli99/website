@@ -48,7 +48,9 @@ export default function App() {
       </head>
       <body className="min-h-full antialiased bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
         <NavBar />
-        <Outlet />
+        <main className="mx-auto max-w-2xl">
+          <Outlet />
+        </main>
         <Footer />
         <ScrollRestoration />
         <Scripts />
