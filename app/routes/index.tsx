@@ -26,7 +26,7 @@ export default function Index() {
       <PersonalInfoCard />
       <section className="pt-12">
         <h2 className="text-2xl mb-3">Favorite Projects</h2>
-        <div className="flex gap-3 flex-wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {projects.map((p) => (
             <ProjectCard key={p.id} project={p} />
           ))}
