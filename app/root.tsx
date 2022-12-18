@@ -9,6 +9,8 @@ import {
 } from "@remix-run/react";
 import { Footer } from "./components/Footer";
 import { NavBar } from "./components/NavBar";
+import { copy } from "./data/copy";
+import { socialMedia } from "./data/socialMedia";
 
 import styles from "./styles/app.css";
 
@@ -19,24 +21,21 @@ export const links: LinksFunction = () => {
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1",
-  title: "Gianfranco Elli - Software Developer.",
-  description:
-    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
-  keywords: "Personal website, Portfolio",
+  title: `${copy.fullName} - ${copy.degree}.`,
+  description: copy.catchPhrase,
+  keywords: copy.keywords.join(", "),
   "og:type": "website",
-  "og:url": "https://gianelli.vercel.app/",
-  "og:title": "Gianfranco Elli - Software Developer.",
-  "og:site_name": "Gianfranco Elli - Software Developer.",
-  "og:description":
-    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
-  "og:image": "https://gianelli.vercel.app/images/og-image.png",
+  "og:url": socialMedia.website.url,
+  "og:title": `${copy.fullName} - ${copy.degree}.`,
+  "og:site_name": `${copy.fullName} - ${copy.degree}.`,
+  "og:description": copy.catchPhrase,
+  "og:image": socialMedia.website.ogImage,
   "twitter:card": "summary_large_image",
-  "twitter:creator": "@GianElli99",
-  "twitter:site": "@GianElli99",
-  "twitter:title": "Gianfranco Elli - Software Developer.",
-  "twitter:description":
-    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
-  "twitter:image": "https://gianelli.vercel.app/images/og-image.png",
+  "twitter:creator": socialMedia.twitter.id,
+  "twitter:site": socialMedia.twitter.id,
+  "twitter:title": `${copy.fullName} - ${copy.degree}.`,
+  "twitter:description": copy.catchPhrase,
+  "twitter:image": socialMedia.website.ogImage,
 });
 
 export default function App() {
