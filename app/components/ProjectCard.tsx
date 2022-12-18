@@ -6,7 +6,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="w-full h-44 rounded-2xl bg-maroon-50/20 border-maroon/10 border-[3px]">
+    <div className="w-full h-44 rounded-md bg-maroon-50/20 border border-maroon/10">
       <span>{project.category}</span>
       <h3>{project.title}</h3>
       {project.technologies.map((tech) => (
