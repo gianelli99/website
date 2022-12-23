@@ -40,14 +40,14 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="min-h-full">
+    <html lang="en" className="min-h-full text-gray-900">
       <head>
         <Meta />
         <Links />
       </head>
       <body className="min-h-full antialiased bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
         <NavBar />
-        <main className="mx-auto max-w-2xl">
+        <main className="mx-auto max-w-2xl px-2">
           <Outlet />
         </main>
         <Footer />
