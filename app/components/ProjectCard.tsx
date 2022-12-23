@@ -1,4 +1,17 @@
+import type { LinksFunction } from "@remix-run/node";
 import type { projects } from "~/data/projects";
+
+const EXTERNAL_LINK_IMG_URL = "/images/external-link.svg";
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "preload",
+      href: EXTERNAL_LINK_IMG_URL,
+      as: "image",
+    },
+  ];
+};
 
 interface ProjectCardProps {
   project: Omit<typeof projects[number], "id">;
@@ -17,25 +30,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         {project.title}
       </h3>
       <p>{project.description.short}</p>
-      {/* {project.technologies.map((tech) => (
-        <TechDescription key={tech.id} tech={tech} />
-      ))} */}
     </div>
   );
-};
-
-interface TechDescriptionProps {
-  tech: Omit<typeof projects[number]["technologies"][number], "id">;
-}
-
-const TechDescription = ({ tech }: TechDescriptionProps) => {
-  return <div>{tech.name}</div>;
 };
 
 const ExternalLink = ({ to }: { to: string }) => {
   return (
     <a href={to} target="_blank" rel="noreferrer" className="h-4 w-4">
-      <img src="/images/external-link.svg" alt="External link icon" />
+      <img src={EXTERNAL_LINK_IMG_URL} alt="External link icon" />
     </a>
   );
 };

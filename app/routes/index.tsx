@@ -5,11 +5,14 @@ import {
   PersonalInfoCard,
   links as personalInfoCardLinks,
 } from "~/components/PersonalInfo";
-import { ProjectCard } from "~/components/ProjectCard";
+import {
+  ProjectCard,
+  links as projectCardLinks,
+} from "~/components/ProjectCard";
 import { projects } from "~/data/projects";
 
 export const links: LinksFunction = () => {
-  return [...personalInfoCardLinks()];
+  return [...personalInfoCardLinks(), ...projectCardLinks()];
 };
 
 export const loader = () => {
