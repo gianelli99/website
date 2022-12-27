@@ -113,7 +113,7 @@ export const projects = [
     ],
   },
   {
-    featured: true,
+    featured: false,
     id: "lawful-desktop",
     title: "Lawful Desktop",
     category: "Desktop",
@@ -141,7 +141,7 @@ export const projects = [
     category: "Web",
     link: "https://gianelli99.github.io/my_checkers_web/",
     description: {
-      short: "Checkers game, play agains a friend (or yourself).",
+      short: "Checkers game, play against a friend (or yourself).",
     },
     technologies: [
       {
@@ -157,7 +157,7 @@ export const projects = [
     ],
   },
   {
-    featured: true,
+    featured: false,
     id: "weather",
     title: "Weather",
     category: "Web",

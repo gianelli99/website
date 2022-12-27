@@ -31,6 +31,7 @@ export const NavBar = () => {
           <li key={link.to}>
             <NavLink
               to={link.to}
+              prefetch="intent"
               className={({ isActive }) =>
                 `${
                   isActive ? "font-semibold" : "font-normal"
