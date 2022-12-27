@@ -26,9 +26,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </span>
         <ExternalLink to={project.link} />
       </div>
-      <h3 className="font-bold tracking-tight text-2xl mb-4">
-        {project.title}
-      </h3>
+      <p className="font-bold tracking-tight text-2xl mb-4">{project.title}</p>
       <p>{project.description.short}</p>
     </div>
   );
