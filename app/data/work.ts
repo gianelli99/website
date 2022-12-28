@@ -9,15 +9,16 @@ export const work = [
       from: "February 2022",
       to: "July 2022",
     },
-    description: "",
+    description:
+      "I worked on a Multi Tenant SaaS application, which provides clients with traceability and storage on the Blockchain.",
     keyAchivements: [
-      "Implementación de nuevas funcionalidades en frontend, backend y su respectivo soporte en la base de datos.",
-      "Sincronización del lanzamiento de funcionalidades en los entornos local, staging y producción.",
-      "Gestión de registros DNS para cada cliente y entorno.",
-      "Mejoras en la experiencia de usuario resolviendo bugs, reduciendo tiempos de respuesta, puliendo la interfaz gráfica.",
-      "Refactorización de características existentes.",
-      "Diseño de correos electrónicos, PDFs.",
-      "Personalización de la paleta de colores, tipografía, internacionalización, etc...",
+      "Implementation of new functionalities in frontend, backend and their respective support in the database.",
+      "Synchronization of the launch of functionalities in the local, staging and production environments.",
+      "Management of DNS records for each client and environment.",
+      "Improvements in the user experience solving bugs, reducing response times, polishing the UI.",
+      "Refactoring of existing features.",
+      "Design of emails, PDFs.",
+      "Customization of the color palette, typography, internationalization, etc...",
     ],
   },
   {
@@ -30,11 +31,13 @@ export const work = [
       from: "January 2019",
       to: "June 2019",
     },
-    description: "",
+    description:
+      "I developed a mobile application that allows you to see how long you have to wait to be attended at a location, reducing contact in times of pandemic.",
     keyAchivements: [
-      "Desarrollo de nuevas características tanto en frontend como en backend.",
-      "Diseño de nuevas tablas y vistas en bases de datos relacionales.",
-      "Mejoras en la interfaz de usuario.",
+      "Reduction of contact in times of pandemic.",
+      "Completion of the project on time.",
+      "Customer expectation management.",
+      "Flawless system implementation.",
     ],
   },
   {
@@ -47,11 +50,12 @@ export const work = [
       from: "January 2019",
       to: "June 2019",
     },
-    description: "",
+    description:
+      "I worked with two University professors in their own company developing web applications, using PHP, HTML, CSS, JS and MySQL.",
     keyAchivements: [
-      "Desarrollo de nuevas características tanto en frontend como en backend.",
-      "Diseño de nuevas tablas y vistas en bases de datos relacionales.",
-      "Mejoras en la interfaz de usuario.",
+      "Development of new features in both frontend and backend.",
+      "Design of new tables and views in relational databases.",
+      "Improvements in the UI.",
     ],
   },
 ];
