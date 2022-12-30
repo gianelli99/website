@@ -38,7 +38,7 @@ export const NavBar = () => {
         ))}
         <li className="relative">
           <button
-            className="inline-flex w-full justify-center items-center rounded-md border-maroon/10 border-2 px-2 pb-1 hover:bg-maroon-50/20"
+            className="inline-flex w-full justify-center items-center rounded-md border-maroon/10 border-2 px-2 pb-1 pt-[2px] hover:bg-maroon-50/20"
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
