@@ -1,8 +1,9 @@
 import { NavLink } from "@remix-run/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const NavBar = () => {
   const [showResumeOptions, setShowResumeOptions] = useState(false);
+  const button = useRef(null);
   const links = [
     {
       to: "/",
@@ -17,6 +18,21 @@ export const NavBar = () => {
       content: "Work",
     },
   ];
+
+  useEffect(() => {
+    const closeDropdown = (e: MouseEvent) => {
+      if (e.composedPath()[0] === button.current) {
+        return;
+      }
+      setShowResumeOptions(false);
+    };
+
+    document.addEventListener("click", closeDropdown);
+
+    return () => {
+      document.removeEventListener("click", closeDropdown);
+    };
+  }, []);
 
   return (
     <nav className="py-6 max-w-2xl mx-auto flex items-center">
@@ -38,6 +54,7 @@ export const NavBar = () => {
         ))}
         <li className="relative">
           <button
+            ref={button}
             className="inline-flex w-full justify-center items-center rounded-md border-maroon/10 border-2 px-2 pb-1 pt-[2px] hover:bg-maroon-50/20"
             id="menu-button"
             aria-expanded="true"
