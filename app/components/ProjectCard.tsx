@@ -38,8 +38,8 @@ const ExternalLink = ({ to }: { to: string }) => {
       <img
         src={EXTERNAL_LINK_IMG_URL}
         alt="External link icon"
-        width="16px"
-        height="16px"
+        width="16"
+        height="16"
       />
     </a>
   );
