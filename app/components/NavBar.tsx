@@ -45,7 +45,7 @@ export const NavBar = () => {
               className={({ isActive }) =>
                 `${
                   isActive ? "font-semibold" : "font-normal"
-                } px-3 py-1 text-gray-800 hover:bg-maroon-50/20 rounded block`
+                } px-3 py-1 pb-[6px] text-gray-800 hover:bg-maroon-50/20 rounded block`
               }
             >
               {link.content}

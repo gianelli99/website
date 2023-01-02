@@ -35,7 +35,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 const ExternalLink = ({ to }: { to: string }) => {
   return (
     <a href={to} target="_blank" rel="noreferrer" className="h-4 w-4">
-      <img src={EXTERNAL_LINK_IMG_URL} alt="External link icon" />
+      <img
+        src={EXTERNAL_LINK_IMG_URL}
+        alt="External link icon"
+        width="16px"
+        height="16px"
+      />
     </a>
   );
 };
