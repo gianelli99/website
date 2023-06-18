@@ -9,9 +9,10 @@ export const WorkCard = ({ work }: WorkCardProps) => {
     <div className="mb-6 p-6 rounded-md bg-maroon-50/20 border border-maroon/10">
       <a href={work.link} target="_blank" rel="noreferrer">
         <img
-          className="max-h-16"
-          height="64"
-          src={work.companyLogo}
+          className="max-h-16 w-auto"
+          height={work.logo.height}
+          width={work.logo.width}
+          src={work.logo.url}
           alt={`${work.company} logo`}
         />
       </a>

@@ -1,10 +1,31 @@
 export const work = [
   {
+    id: "freebee",
+    company: "Freebee",
+    role: "Fullstack Software Engineer",
+    link: "https://ridefreebee.com/",
+    logo: {
+      url: "/images/freebee.svg",
+      width: 120,
+      height: 25,
+    },
+    date: {
+      from: "January 2023",
+      to: "Today",
+    },
+    description: "Currently working here",
+    keyAchivements: [],
+  },
+  {
     id: "pixivus",
     company: "PIXIVUS S.A.S.",
-    role: "Fullstack Developer",
+    role: "Fullstack Software Developer",
     link: "https://pixivus.com/",
-    companyLogo: "/images/pixivus-logo.png",
+    logo: {
+      url: "/images/pixivus-logo.png",
+      width: 229,
+      height: 72,
+    },
     date: {
       from: "February 2022",
       to: "July 2022",
@@ -23,10 +44,14 @@ export const work = [
   },
   {
     id: "mutual-acmo",
-    company: "Freelance Development",
+    company: "Freelance Software Development",
     role: "Mobine + Desktop Developer",
     link: "https:/gianelli.vercel.app/",
-    companyLogo: "/images/my-face-removebg.png",
+    logo: {
+      url: "/images/my-face-removebg.png",
+      width: 293,
+      height: 456,
+    },
     date: {
       from: "January 2019",
       to: "June 2019",
@@ -43,9 +68,13 @@ export const work = [
   {
     id: "bi-sports",
     company: "BI-SPORTS",
-    role: "Fullstack Developer",
+    role: "Fullstack Software Developer",
     link: "https://www.bi-sports.com/",
-    companyLogo: "/images/bisports-logo.svg",
+    logo: {
+      url: "/images/bisports-logo.svg",
+      width: 240,
+      height: 56,
+    },
     date: {
       from: "January 2019",
       to: "June 2019",
