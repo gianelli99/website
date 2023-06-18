@@ -23,8 +23,8 @@ export const work = [
     link: "https://pixivus.com/",
     logo: {
       url: "/images/pixivus-logo.png",
-      width: 229,
-      height: 72,
+      width: 228,
+      height: 80,
     },
     date: {
       from: "February 2022",

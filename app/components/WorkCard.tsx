@@ -7,9 +7,9 @@ interface WorkCardProps {
 export const WorkCard = ({ work }: WorkCardProps) => {
   return (
     <div className="mb-6 p-6 rounded-md bg-maroon-50/20 border border-maroon/10">
-      <a href={work.link} target="_blank" rel="noreferrer">
+      <a href={work.link} target="_blank" className="flex h-16" rel="noreferrer">
         <img
-          className="max-h-16 w-auto"
+          className="w-auto"
           height={work.logo.height}
           width={work.logo.width}
           src={work.logo.url}
