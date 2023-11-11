@@ -12,31 +12,82 @@ import { NavBar } from "./components/NavBar";
 import { copy } from "./data/copy";
 import { socialMedia } from "./data/socialMedia";
 
-import styles from "./styles/app.css";
+import styles from "./styles.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1",
-  title: `${copy.fullName} - ${copy.degree}.`,
-  description: copy.catchPhrase,
-  keywords: copy.keywords.join(", "),
-  "og:type": "website",
-  "og:url": socialMedia.website.url,
-  "og:title": `${copy.fullName} - ${copy.degree}.`,
-  "og:site_name": `${copy.fullName} - ${copy.degree}.`,
-  "og:description": copy.catchPhrase,
-  "og:image": socialMedia.website.ogImage,
-  "twitter:card": "summary_large_image",
-  "twitter:creator": socialMedia.twitter.id,
-  "twitter:site": socialMedia.twitter.id,
-  "twitter:title": `${copy.fullName} - ${copy.degree}.`,
-  "twitter:description": copy.catchPhrase,
-  "twitter:image": socialMedia.website.ogImage,
-});
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title: `${copy.fullName} - ${copy.degree}.`,
+    },
+    {
+      charSet: "utf-8",
+    },
+    {
+      name: "keywords",
+      content: copy.keywords.join(", "),
+    },
+    {
+      name: "viewport",
+      content: "width=device-width,initial-scale=1",
+    },
+    {
+      name: "description",
+      content: copy.catchPhrase,
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:url",
+      content: socialMedia.website.url,
+    },
+    {
+      property: "og:title",
+      content: `${copy.fullName} - ${copy.degree}.`,
+    },
+    {
+      property: "og:site_name",
+      content: `${copy.fullName} - ${copy.degree}.`,
+    },
+    {
+      property: "og:description",
+      content: copy.catchPhrase,
+    },
+    {
+      property: "og:image",
+      content: socialMedia.website.ogImage,
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:creator",
+      content: socialMedia.twitter.id,
+    },
+    {
+      name: "twitter:site",
+      content: socialMedia.twitter.id,
+    },
+    {
+      name: "twitter:title",
+      content: `${copy.fullName} - ${copy.degree}.`,
+    },
+    {
+      name: "twitter:description",
+      content: copy.catchPhrase,
+    },
+    {
+      name: "twitter:image",
+      content: socialMedia.website.ogImage,
+    },
+  ];
+};
 
 export default function App() {
   return (
