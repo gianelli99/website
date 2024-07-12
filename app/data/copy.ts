@@ -2,6 +2,6 @@ export const copy = {
   fullName: "Gianfranco Elli",
   degree: "Software Engineer",
   catchPhrase:
-    "I love spending time looking 'underneath the hood' to understand the magic behind the scenes.",
+    "Ownership and professionalism define me. I have experience working in startups and delivering solutions to customer needs. Never done learning.",
   keywords: ["Personal website", "Portfolio"],
 };
