@@ -1,8 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+export default {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         platinatepurple: {
           50: "#8e3286",
@@ -47,4 +52,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+} satisfies Config;
