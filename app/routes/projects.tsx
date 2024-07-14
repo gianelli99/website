@@ -1,15 +1,7 @@
 import { json } from "@remix-run/node";
-import type { LinksFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import {
-  ProjectCard,
-  links as projectCardLinks,
-} from "~/components/ProjectCard";
+import { ProjectCard } from "~/components/ProjectCard";
 import { projects } from "~/data/projects";
-
-export const links: LinksFunction = () => {
-  return [...projectCardLinks()];
-};
 
 export const loader = () => {
   return json({

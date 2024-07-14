@@ -15,7 +15,7 @@ export const links: LinksFunction = () => {
 
 export const PersonalInfoCard = () => {
   return (
-    <div className="flex flex-col-reverse sm:flex-row justify-between items-center p-4 border border-maroon/10 shadow-lg rounded-lg transition ease-out bg-gradient-to-br from-platinatepurple/50 via-maroon/50 to-mellowapricot/50 hover:scale-[1.02]">
+    <div className="flex flex-col-reverse sm:flex-row justify-between items-center p-5 border border-maroon/10 shadow-lg rounded-lg transition ease-out bg-gradient-to-br from-platinatepurple/50 via-maroon/50 to-mellowapricot/50 hover:scale-[1.02]">
       <div className="sm:mr-8">
         <h1 className="font-bold tracking-tight text-3xl sm:text-5xl">
           {copy.fullName}
