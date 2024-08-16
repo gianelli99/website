@@ -1,7 +1,8 @@
-import { json } from "@remix-run/node";
+import { json } from "@vercel/remix";
 import { useLoaderData } from "@remix-run/react";
 import { WorkCard } from "~/components/WorkCard";
 import { work } from "~/data/work";
+
 export const loader = () => {
   return json({
     work,

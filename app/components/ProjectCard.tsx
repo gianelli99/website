@@ -1,5 +1,6 @@
 import type { projects } from "~/data/projects";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import React from "react";
 
 interface ProjectCardProps {
   project: Omit<(typeof projects)[number], "id">;
@@ -12,7 +13,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <span className="text-gray-700 font-bold text-sm">
           #{project.category}
         </span>
-        <ExternalLink to={project.link} />
+        <ExternalLink
+          to={project.link}
+          ariaLabel={`Read more about "${project.title}"`}
+        />
       </div>
       <p className="font-bold tracking-tight text-2xl mb-4">{project.title}</p>
       <p>{project.description.short}</p>
@@ -20,9 +24,15 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   );
 };
 
-const ExternalLink = ({ to }: { to: string }) => {
+const ExternalLink = ({
+  to,
+  ariaLabel,
+}: {
+  to: string;
+  ariaLabel: React.AriaAttributes["aria-label"];
+}) => {
   return (
-    <a href={to} target="_blank" rel="noreferrer">
+    <a href={to} target="_blank" rel="noreferrer" aria-label={ariaLabel}>
       <ExternalLinkIcon />
     </a>
   );

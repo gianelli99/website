@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@vercel/remix";
 import { copy } from "~/data/copy";
 
 const FACE_URL = "/images/my-face.jpeg";

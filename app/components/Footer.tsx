@@ -58,7 +58,7 @@ export const Footer = () => {
         >
           Lydia Hallie
         </a>
-        's personal sites.
+        &apos;s personal sites.
       </p>
     </footer>
   );

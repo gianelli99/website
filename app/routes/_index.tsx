@@ -1,5 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
+import { json, type LinksFunction } from "@vercel/remix";
 import { useLoaderData } from "@remix-run/react";
 import {
   PersonalInfoCard,

@@ -1,7 +1,6 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@vercel/remix";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -12,11 +11,13 @@ import { NavBar } from "./components/NavBar";
 import { copy } from "./data/copy";
 import { socialMedia } from "./data/socialMedia";
 
-import styles from "./styles.css";
+import "./tailwind.css";
+
+// All routes will be rendered using Edge runtime
+export const config = { runtime: "edge" };
 
 export const links: LinksFunction = () => {
   return [
-    { rel: "stylesheet", href: styles },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
       rel: "preconnect",
@@ -101,23 +102,32 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function App() {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="min-h-full text-gray-900">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body className="min-h-full antialiased bg-gradient-to-br from-platinatepurple/30 via-maroon/30 to-mellowapricot/30">
-        <NavBar />
-        <main className="mx-auto max-w-2xl px-2">
-          <Outlet />
-        </main>
-        <Footer />
+        {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <NavBar />
+      <main className="mx-auto max-w-2xl px-2">
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   );
 }
