@@ -6,6 +6,7 @@ import {
 } from "~/components/PersonalInfo";
 import { ProjectCard } from "~/components/ProjectCard";
 import { projects } from "~/data/projects";
+import { mergeCacheHeaders } from "~/utils/mergeCacheHeaders";
 
 export const links: LinksFunction = () => {
   return [...personalInfoCardLinks()];
@@ -13,10 +14,20 @@ export const links: LinksFunction = () => {
 
 export const loader = () => {
   const featuredProjects = projects.filter((p) => p.featured);
-  return json({
-    projects: featuredProjects,
-  });
+
+  return json(
+    {
+      projects: featuredProjects,
+    },
+    {
+      headers: {
+        "Cache-Control": "s-maxage=1, stale-while-revalidate=2592000",
+      },
+    }
+  );
 };
+
+export const headers = mergeCacheHeaders;
 
 export default function Index() {
   const { projects } = useLoaderData<typeof loader>();

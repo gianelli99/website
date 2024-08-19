@@ -2,12 +2,22 @@ import { json } from "@vercel/remix";
 import { useLoaderData } from "@remix-run/react";
 import { ProjectCard } from "~/components/ProjectCard";
 import { projects } from "~/data/projects";
+import { mergeCacheHeaders } from "~/utils/mergeCacheHeaders";
 
 export const loader = () => {
-  return json({
-    projects,
-  });
+  return json(
+    {
+      projects,
+    },
+    {
+      headers: {
+        "Cache-Control": "s-maxage=1, stale-while-revalidate=2592000",
+      },
+    }
+  );
 };
+
+export const headers = mergeCacheHeaders;
 
 export default function ProjectsPage() {
   const { projects } = useLoaderData<typeof loader>();
