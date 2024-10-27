@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@vercel/remix";
 import { copy } from "~/data/copy";
 
-const FACE_URL = "/images/my-face.jpeg";
+const FACE_URL = "/images/my-face.webp";
 
 export const links: LinksFunction = () => {
   return [
@@ -23,10 +23,10 @@ export const PersonalInfoCard = () => {
         <p className="mb-4">{copy.degree}</p>
         <p className="mb-4">{copy.catchPhrase}</p>
       </div>
-      <div className="hidden sm:block w-48">
+      <div className="hidden sm:block w-24 h-24 flex-shrink-0">
         <img
-          width="128"
-          height="128"
+          width="512"
+          height="512"
           src={FACE_URL}
           alt={copy.fullName}
           className="rounded-full"

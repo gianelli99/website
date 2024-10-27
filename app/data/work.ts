@@ -32,7 +32,7 @@ export const work = [
     role: "Fullstack Software Developer",
     link: "https://pixivus.com/",
     logo: {
-      url: "/images/pixivus-logo.png",
+      url: "/images/pixivus-logo.webp",
       width: 228,
       height: 80,
     },
@@ -54,7 +54,7 @@ export const work = [
     role: "Freelance Software Developer",
     link: "https://gianelli.vercel.app/",
     logo: {
-      url: "/images/my-face-removebg.png",
+      url: "/images/my-face-removebg.webp",
       width: 293,
       height: 456,
     },
