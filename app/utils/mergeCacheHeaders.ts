@@ -1,4 +1,4 @@
-import { HeadersFunction } from "@vercel/remix";
+import { HeadersFunction } from "@remix-run/node";
 
 export const mergeCacheHeaders: HeadersFunction = ({ loaderHeaders }) => {
   const loaderCache = loaderHeaders.get("Cache-Control");

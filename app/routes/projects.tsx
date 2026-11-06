@@ -1,5 +1,5 @@
-import { json } from "@vercel/remix";
 import { useLoaderData } from "@remix-run/react";
+import { json } from "@remix-run/node";
 import { ProjectCard } from "~/components/ProjectCard";
 import { projects } from "~/data/projects";
 import { mergeCacheHeaders } from "~/utils/mergeCacheHeaders";
@@ -13,7 +13,7 @@ export const loader = () => {
       headers: {
         "Cache-Control": "s-maxage=1, stale-while-revalidate=2592000",
       },
-    }
+    },
   );
 };
 

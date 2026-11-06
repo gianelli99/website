@@ -1,4 +1,4 @@
-import { json, type LinksFunction } from "@vercel/remix";
+import { json, LinksFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import {
   PersonalInfoCard,
@@ -23,7 +23,7 @@ export const loader = () => {
       headers: {
         "Cache-Control": "s-maxage=1, stale-while-revalidate=2592000",
       },
-    }
+    },
   );
 };
 

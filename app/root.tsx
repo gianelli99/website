@@ -1,4 +1,3 @@
-import type { LinksFunction, MetaFunction } from "@vercel/remix";
 import {
   Links,
   Meta,
@@ -12,6 +11,7 @@ import { copy } from "./data/copy";
 import { socialMedia } from "./data/socialMedia";
 
 import "./tailwind.css";
+import { LinksFunction, MetaFunction } from "@remix-run/node";
 
 // All routes will be rendered using Edge runtime
 export const config = { runtime: "edge" };
